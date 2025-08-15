@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Banco Innovador — Arquitectura basada en servicios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0f172a;
+      --panel:#111827;
+      --muted:#9ca3af;
+      --text:#e5e7eb;
+      --brand:#60a5fa;
+      --brand-2:#34d399;
+      --brand-3:#fbbf24;
+      --brand-4:#f87171;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:var(--bg); color:var(--text); font-family:system-ui, sans-serif; line-height:1.4;
+    }
+    .wrap{max-width:1200px; margin:40px auto; padding:24px;}
+    .title{font-size:32px; font-weight:800; margin:0 0 6px}
+    .sub{color:var(--muted); margin:0 0 24px}
+    .student-info{background:rgba(255,255,255,.08); border-radius:12px; padding:12px; margin-bottom:20px;}
+    .student-info p{margin:4px 0; font-weight:600; color:var(--brand-3);}
+    .intro, .analysis, .services, .platform, .strategy, .metrics {background:rgba(255,255,255,.05); border-radius:12px; padding:16px; margin-bottom:20px;}
+    .intro h2, .analysis h2, .services h2, .platform h2, .strategy h2, .metrics h2 {color:var(--brand-3); margin-top:0;}
+    .canvas{background:rgba(255,255,255,.05); border-radius:16px; padding:20px; box-shadow:0 0 20px rgba(0,0,0,0.3);}
+    .layer{border-radius:14px; padding:16px; margin:14px 0; background:linear-gradient(135deg, rgba(96,165,250,0.2), rgba(52,211,153,0.2)); position:relative; box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+    .layer:nth-child(odd){background:linear-gradient(135deg, rgba(251,191,36,0.2), rgba(248,113,113,0.2));}
+    .layer h3{margin:0 0 12px; font-size:18px; font-weight:800; color:#fff}
+    .cols{display:grid; grid-template-columns:repeat(12, 1fr); gap:12px}
+    .card{grid-column: span 3; background:rgba(17,24,39,0.9); border-radius:12px; padding:12px 14px; display:flex; flex-direction:column; align-items:flex-start; gap:6px; transition:transform 0.2s, box-shadow 0.2s;}
+    .card:hover{transform:translateY(-4px); box-shadow:0 6px 16px rgba(0,0,0,0.4);}
+    .card h4{margin:0; font-size:15px; font-weight:700; display:flex; align-items:center; gap:8px; color:var(--brand-3)}
+    .muted{color:var(--muted); font-size:13px}
+    .flow{position:relative; height:30px;}
+    .arrow{width:0; height:0; border-left:15px solid transparent; border-right:15px solid transparent; border-top:20px solid var(--brand); position:absolute; left:50%; transform:translateX(-50%); animation: bounce 1.2s infinite;}
+    @keyframes bounce {
+      0%, 100% {transform:translate(-50%,0);}
+      50% {transform:translate(-50%,6px);}
+    }
+    @media (max-width: 980px){.card{grid-column:span 6}}
+    @media (max-width: 640px){.card{grid-column:span 12}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="title">Banco Innovador — Arquitectura basada en servicios</h1>
+    <div class="student-info">
+      <p>PRIMER PARCIAL DESARROLLO WEB</p>
+      <p>MI NOMBRE: KEVIN ANTONIO LOPEZ GOMEZ</p>
+      <p>MI CARNET: 5990-18-4504</p>
+    </div>
+    <p class="sub">Patrón de capas, API Gateway y microservicios. Colores vibrantes, flechas e íconos para mejor visualización.</p>
+
+    <div class="intro">
+      <h2>Introducción</h2>
+      <p>El Banco Innovador busca adaptarse a las demandas actuales del mercado mediante una transición hacia un modelo de negocio basado en servicios...</p>
+    </div>
+    <div class="analysis">
+      <h2>1. Análisis del Mercado</h2>
+      <ul>
+        <li>Uso creciente de aplicaciones móviles para operaciones bancarias.</li>
+        <li>Integración con plataformas de pago y fintech.</li>
+        <li>Automatización de procesos y servicios personalizados.</li>
+        <li>Enfoque en seguridad y experiencia del usuario.</li>
+      </ul>
+      <p><strong>Principales competidores:</strong> GYT Continental, Banco Industrial (BI), Banco Agromercantil (BAM), Promérica, Ficohsa.</p>
+    </div>
+    <div class="services">
+      <h2>2. Definición de Servicios</h2>
+      <ol>
+        <li>Gestión de Finanzas Personales</li>
+        <li>Asesoría Financiera Personalizada</li>
+        <li>Servicios de Inversión Automatizados</li>
+        <li>Préstamos y Créditos Digitales</li>
+        <li>Programas de Fidelización y Recompensas</li>
+      </ol>
+    </div>
+    <div class="platform">
+      <h2>3. Plataforma Tecnológica</h2>
+      <p>La plataforma se basará en una arquitectura de servicios con patrón de capas: presentación, negocio, persistencia y datos...</p>
+    </div>
+    <div class="strategy">
+      <h2>4. Estrategia de Implementación</h2>
+      <p>Etapas de implementación: evaluación, desarrollo, integración, pruebas, despliegue. Recursos: nube, herramientas de desarrollo, bases de datos, seguridad.</p>
+    </div>
+    <div class="metrics">
+      <h2>5. Métricas de Éxito</h2>
+      <ul>
+        <li>Tasa de satisfacción del cliente (>90%)</li>
+        <li>Crecimiento en adopción de nuevos servicios (>25% en 6 meses)</li>
+        <li>Incremento en retención de clientes (>15% anual)</li>
+        <li>Aumento de ingresos digitales (>20% anual)</li>
+      </ul>
+    </div>
+
+    <div class="canvas">
+      <section class="layer"><h3>Capa de Presentación</h3><div class="cols"><div class="card"><h4><i class="fas fa-mobile-alt"></i> App Móvil</h4></div><div class="card"><h4><i class="fas fa-globe"></i> Web SPA</h4></div><div class="card"><h4><i class="fas fa-desktop"></i> Escritorio</h4></div><div class="card"><h4><i class="fas fa-handshake"></i> Canales terceros</h4></div></div></section>
+      <div class="flow"><div class="arrow"></div></div>
+      <section class="layer"><h3>API Gateway</h3><div class="cols"><div class="card"><h4><i class="fas fa-random"></i> Enrutamiento</h4></div><div class="card"><h4><i class="fas fa-lock"></i> Auth & CORS</h4></div><div class="card"><h4><i class="fas fa-tachometer-alt"></i> Rate limit</h4></div><div class="card"><h4><i class="fas fa-chart-line"></i> Observabilidad</h4></div></div></section>
+      <div class="flow"><div class="arrow"></div></div>
+      <section class="layer"><h3>Capa de Negocio</h3><div class="cols"><div class="card"><h4><i class="fas fa-wallet"></i> Finanzas Personales</h4></div><div class="card"><h4><i class="fas fa-user-tie"></i> Asesoría Financiera</h4></div><div class="card"><h4><i class="fas fa-chart-pie"></i> Inversiones</h4></div><div class="card"><h4><i class="fas fa-hand-holding-usd"></i> Créditos Digitales</h4></div></div></section>
+      <div class="flow"><div class="arrow"></div></div>
+      <section class="layer"><h3>Capa de Persistencia</h3><div class="cols"><div class="card"><h4><i class="fas fa-database"></i> DB Core</h4></div><div class="card"><h4><i class="fas fa-server"></i> NoSQL</h4></div><div class="card"><h4><i class="fas fa-bolt"></i> Cache</h4></div><div class="card"><h4><i class="fas fa-chart-bar"></i> BI</h4></div></div></section>
+      <div class="flow"><div class="arrow"></div></div>
+      <section class="layer"><h3>Sistemas Externos</h3><div class="cols"><div class="card"><h4><i class="fas fa-credit-card"></i> Redes de pago</h4></div><div class="card"><h4><i class="fas fa-id-card"></i> Buró crédito</h4></div><div class="card"><h4><i class="fas fa-sms"></i> OTP / Email</h4></div><div class="card"><h4><i class="fas fa-shield-alt"></i> Fraude ML</h4></div></div></section>
+    </div>
+  </div>
+</body>
+</html>
